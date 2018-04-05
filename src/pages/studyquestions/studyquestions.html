@@ -1,0 +1,71 @@
+<!--
+  Generated template for the StudyquestionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>Study Question</ion-title>
+      </ion-navbar>
+    
+</ion-header>
+<ion-content>
+    <div class="main-center main-content">
+    <form [formGroup]="wsForm" (ngSubmit)="onSubmit(wsForm.value)" style="padding-top:50px">
+        <ion-card >
+          <ion-card-header >
+            <ion-label >Are you 18 years or older?<label class="mandatory-indicator"></label></ion-label> 
+          </ion-card-header>
+            
+          <ion-list radio-group [formControl]="wsForm.controls['ages']">
+            <ion-item>
+              <ion-label>Yes</ion-label>
+              <ion-radio value="1" checked></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-card> 
+        <ion-card >
+          <ion-card-header >
+            <ion-label >Do you live in United States of America?<label class="mandatory-indicator"></label></ion-label> 
+          </ion-card-header>
+    
+          <ion-list radio-group [formControl]="wsForm.controls['living']">
+            <ion-item>
+              <ion-label>Yes</ion-label>
+              <ion-radio value="1" checked></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio value="0" checked></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-card> 
+        <ion-card >
+          <ion-card-header >
+            <ion-label >Can you read and understand English in<br/> order to provide informed consent and follow the<br/> instructions?</ion-label> 
+          </ion-card-header>
+    
+          <ion-list radio-group [formControl]="wsForm.controls['instructions']">
+            <ion-item>
+              <ion-label>Yes</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+        <button ion-button>Next</button>
+    </form>
+    </div>
+</ion-content>
+

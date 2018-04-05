@@ -1,0 +1,155 @@
+<ion-header>
+  <ion-navbar  hideBackButton="true">
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <ion-title text-center> Dashboard</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only><ion-icon name="search"></ion-icon></button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+<ion-content >
+<div *ngIf="activity_data.length">
+  <ion-card  *ngFor = "let mydata of activity_data">
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="{{mydata.user_img}}">
+    </ion-avatar>
+    <h2>{{mydata.user_name}}</h2>
+    <p>{{mydata.created}}</p>
+  </ion-item>
+
+  <img src="{{mydata.topic_img}}">
+
+  <ion-card-content>
+    <p>{{mydata.description}}</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        {{mydata.time_ago}}
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+</div>
+
+<ion-card>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="http://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png">
+    </ion-avatar>
+    <h2>Marty McFly</h2>
+    <p>November 5, 1955</p>
+  </ion-item>
+
+  <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-tmntr.jpg">
+
+  <ion-card-content>
+    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+
+
+
+<ion-card>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="http://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png">
+    </ion-avatar>
+    <h2>Marty McFly</h2>
+    <p>November 5, 1955</p>
+  </ion-item>
+
+  <img src="assets/images/banners/banner1.jpg">
+
+  <ion-card-content>
+    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+
+
+
+  <ion-slides autoplay="2000" loop="true" speed="900" >
+    <ion-slide>
+  	     <img src="./assets/images/banners/banner1.jpg">
+    </ion-slide>
+    <ion-slide>
+          <img src="./assets/images/banners/banner2.jpg">
+    </ion-slide>
+    <ion-slide>
+          <img src="./assets/images/banners/banner3.jpg">
+    </ion-slide>
+  </ion-slides>
+
+
+  <ion-card >
+    <img src="./assets/images/ads/ads1.jpg">
+  </ion-card>
+  <ion-card >
+    <img src="./assets/images/ads/ads2.jpg">
+  </ion-card>
+  <ion-card >
+    <img src="./assets/images/ads/ads3.jpg">
+  </ion-card>
+
+</ion-content>

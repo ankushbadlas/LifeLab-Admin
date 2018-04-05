@@ -1,0 +1,24 @@
+page-studyquestions {
+    ion-slides{ max-height:23%;}
+    .main-content{
+        transform: none; 
+    }
+    .main-content button span{
+        padding: 0 15px;
+    }
+    .main-content ion-item {
+        width: 50%;
+        float: left;
+        display: table;
+        text-align: center;
+    }
+    .main-content .radio-icon {
+        visibility: hidden;
+    }
+    .main-content .item-radio-checked.item-radio {
+        border-bottom: 2px solid  red;
+    }
+    .main-content .card-md{
+        width: calc(100% - 60px);
+    }
+}

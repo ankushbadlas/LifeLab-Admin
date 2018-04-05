@@ -1,0 +1,27 @@
+<ion-header >
+  <ion-navbar  hideBackButton="true">
+    <ion-buttons end>
+     
+   </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div text-center class="animated rotateIn"><img src="./assets/images/logo.png"></div>
+    <!--<ion-icon name="pulse" class="animated rotateIn center"></ion-icon> --> 
+    <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" novalidate>
+    <ion-list no-lines padding-top>
+      <ion-item>
+        <ion-input type="email" placeholder="Email"  name="userEmail" [(ngModel)]="userEmail" ngControl="userEmail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Password" name="userPassword" [(ngModel)]="userPassword" ngControl="userPassword"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block round class="animated fadeInLeft" color="secondary">Login</button>
+    </form>
+    <div padding-top>
+    <button ion-button block class='animated rotateInUpRight' color="light" clear (click)="signupPage();">If new member ? SIGNUP</button>
+    <button ion-button block class='animated rotateInUpLeft' color="light" clear (click)="forgotPasswordPage();">Forgot Password</button>
+  </div>
+
+</ion-content>

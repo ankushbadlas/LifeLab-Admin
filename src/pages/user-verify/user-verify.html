@@ -1,0 +1,26 @@
+<ion-header >
+  <ion-navbar  hideBackButton="true">
+    <ion-buttons end>
+     
+   </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div text-center class="animated rotateIn"><img src="./assets/images/login_user.png"></div>
+    
+     <h4>Verification code successfully sent. Please enter the verification code that you received from us by email and click verify now button below</h4>
+
+    <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" novalidate>
+    <ion-list no-lines padding-top>
+      <ion-item>
+        <ion-input type="text" placeholder="Verify Code"  name="verify_code" [(ngModel)]="verify_code" ngControl="verify_code"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block round class="animated fadeInLeft" color="secondary">VERIFY NOW</button>
+    </form>
+
+    <div padding-top>
+
+    <button ion-button block class='animated rotateInUpRight' color="light" clear (click)="resendVerificationCode();">Resend Verification Code</button>
+  </div>
+</ion-content>
